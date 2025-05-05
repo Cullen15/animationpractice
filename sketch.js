@@ -33,7 +33,6 @@ function setup() {
     fill(255);
     background(0);
 
-    // Initialize color schemes in setup
     colorSchemes = {
         birth: [
             color(255, 100, 150),
@@ -112,7 +111,6 @@ class EnhancedParticle {
         this.rotation = random(TWO_PI);
         this.shape = floor(random(3));
         
-        // Get color from schemes
         let schemeColors = colorSchemes[currentPhase];
         this.color = schemeColors[floor(random(schemeColors.length))];
     }
@@ -147,14 +145,14 @@ class EnhancedParticle {
              this.color.levels[2], this.alpha);
 
         switch(this.shape) {
-            case 0: // Circle
+            case 0: 
                 ellipse(0, 0, this.size);
                 break;
-            case 1: // Square
+            case 1: 
                 rectMode(CENTER);
                 rect(0, 0, this.size, this.size);
                 break;
-            case 2: // Triangle
+            case 2: 
                 triangle(-this.size/2, this.size/2,
                         this.size/2, this.size/2,
                         0, -this.size/2);
